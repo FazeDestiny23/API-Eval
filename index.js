@@ -53,11 +53,11 @@ app.listen(port, () => {
 });
 
 app.get("/", (_, res) => {
-    res.send("Hello World!");
+    res.send("Hello World!!");
 });
 
 app.get("/generate_new_token", (_, res) => {
-    const expiration_date = Date.now() + (60 * 60 * 1000) // Fecha actual mas una hora en ms
+    const expiration_date = Date.now() + (60 * 60 * 1000) 
 
     const token = crypto.randomBytes(64).toString("base64");
     tokens.set(token, expiration_date)
